@@ -8,3 +8,9 @@ Catalogador de Regras LSP do sistema Sênior
      - Zeos Library
      - SynFacilHighlighter (incluso aqui no GIT)
     
+### Características
+ - Code LSP Highlight
+ - Pesquisa de texto (em todo projeto)
+ 
+ 
+    
