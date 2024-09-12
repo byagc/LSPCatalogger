@@ -32,7 +32,7 @@ Catalogo de projetos (Banco de Dados sqlite )
 <blockquote>Deu mais trabalho editando o README.MD</blockquote>
 <blockquote>Se foi útil pra voçê, considere fazer uma doação. Será bem vinda. ;)</blockquote>
 
-<span style="color:#0984e3">feito por Arlon G. Cardoso</span>
+####feito por Arlon G. Cardoso - https://arlon.me
 
 
   
