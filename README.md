@@ -22,11 +22,13 @@ Catalogo de projetos (Banco de Dados sqlite )
 ![image](https://github.com/user-attachments/assets/6e8bc219-e1b2-4240-a629-ae7d8b951d64)
 
  
- 1 Abrir projetos
- 2 Adicionar novo
- 3 Editar o título
- 4 Colar Código obtido da listagem de regras no Senior
+ 1. Abrir projetos
+ 2. Adicionar novo
+ 3. Editar o título
+ 4. Colar Código obtido da listagem de regras no Senior
   
+  <blockquote>Pode baixar o executável ou pode baixar o código e compilar você mesmo. Totalmente opensource
+</blockquote>
 
   
   
