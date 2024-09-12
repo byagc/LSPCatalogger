@@ -1,0 +1,75 @@
+object FormProjects: TFormProjects
+  Left = 484
+  Height = 473
+  Top = 31
+  Width = 785
+  Caption = 'Novo Projeto'
+  ClientHeight = 473
+  ClientWidth = 785
+  object Panel1: TPanel
+    Left = 0
+    Height = 41
+    Top = 0
+    Width = 785
+    Align = alTop
+    ClientHeight = 41
+    ClientWidth = 785
+    TabOrder = 0
+    object DBNavigator1: TDBNavigator
+      Left = 472
+      Height = 39
+      Top = 1
+      Width = 312
+      Align = alRight
+      BevelOuter = bvNone
+      ChildSizing.EnlargeHorizontal = crsScaleChilds
+      ChildSizing.EnlargeVertical = crsScaleChilds
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 100
+      ClientHeight = 39
+      ClientWidth = 312
+      DataSource = FormMain.dsProjects
+      Options = []
+      TabOrder = 0
+    end
+  end
+  object DBMemo1: TDBMemo
+    Left = 225
+    Height = 432
+    Top = 41
+    Width = 560
+    Align = alClient
+    DataField = 'content'
+    DataSource = FormMain.dsProjects
+    TabOrder = 1
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 432
+    Top = 41
+    Width = 225
+    Align = alLeft
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'id'
+        Visible = False
+        FieldName = 'id'
+      end    
+      item
+        Title.Caption = 'name'
+        Width = 190
+        FieldName = 'name'
+      end    
+      item
+        Title.Caption = 'content'
+        Visible = False
+        FieldName = 'content'
+      end>
+    DataSource = FormMain.dsProjects
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgDisplayMemoText]
+    TabOrder = 2
+  end
+end

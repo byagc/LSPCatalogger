@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<Language name="LSPSenior" ext="lsp">
+  <Completion>
+    <Include Attribute="Keyword"></Include>
+	<List Name="plantillas"> 
+"ALTER SESSION SET "
+"BEGIN&#xD;END;"
+"COMMIT;"
+"CREATE OR REPLACE "
+"CREATE TABLE nombre(&#xD;
+  campo1 tipo1,&#xD;  campo2 tipo2);"
+"CREATE INDEX "
+
+	</List>
+</Completion>
+<symbols>
+</symbols>
+  <Identifiers CharsStart= "A..Za..z_" Content = "A..Za..z0..9_"> 
+    <token attribute="Tipo"> 
+     numero  alfa data cursor Funcao
+    </token>
+    <token attribute="Keyword"> 
+    inicio  caso E OU senao Para FIM Pare Continue  VaPara Cancel  SE Enquanto Mensagem Regra  Abrir fechar            
+    </token>
+    <token attribute="Funcoes"> 
+	DecimalParaAlfa CaracterParaAlfa IntParaAlfa CopiarAlfa TamanhoAlfa ConverteMascara LimpaEspacos AlfaParaInt 
+	ConverteParaMaiusculo DecodData CodData AlteraControle
+	Arredonda EstaNulo RetornaValorCFG
+    SetarFiltroSql ExecSQL Sql_Criar Sql_UsarSqlSenior2 Sql_UsarAbrangencia Sql_DefinirComando SQL_Proximo  IniciarTransacao  
+    SQL_RetornarInteiro	SQL_DefinirData InsClauSQLWhere
+	EstornaComponentes CancelarOP
+	CarregarImagemFundoSistema
+	SetaAlfaTelaEntrada ExecutaRelatorio
+	Sql_DefinirInteiro Sql_DefinirAlfa Sql_AbrirCursor Sql_Eof Sql_RetornarFlutuante Sql_RetornarAlfa Sql_FecharCursor Sql_Destruir
+	   Prop_ObterCodigoCliente TrocaEmpresaFilial GeraObsBloPed 
+	GravarNLEOL GeraLog   EntradaValor
+	IniciaBarraProgresso AtualizaBarraProgresso  FinalizaBarraProgresso
+    </token>
+  </Identifiers>
+  <Token CharsStart="$" Content = '0..9ABCDEFabcdef' Attribute='NUMBER'> </Token>
+  <Token CharsStart="#" Content = '0..9' Attribute='STRING'> </Token>
+  <Token CharsStart="0..9" Content = '0..9.' Attribute='NUMBER'> </Token>
+  <String Start='"' End='"' Multiline="true"></String>
+  <Comment Start="/*" End="*/" Multiline="true" Folding="true"></Comment>
+  <Comment Start="(*" End="*)" Multiline="true"></Comment>
+  <Comment Start="@" End="@" Multiline="true" Folding="true"></Comment>
+
+  <Section Name="unit" Start="unit"></Section>
+  <Section Name="interface" Start="interface">
+    <Block Name="Record" Start="Record" End="End" ></Block>
+    <Block Name="Class" Start="Class" End="end" >
+      <Section Start="private"> </Section>
+      <Section Start="public"> </Section>
+    </Block>
+  </Section>
+  <Section Name="implementation" Start="implementation">
+    <Block Name="Proc" Start="procedure" End="end" BackCol="#D0F5FF">
+      <Block Name="ProcParam" Start="(" End=")" Folding="false"></Block>
+      <Section Start="var" BackCol="#F3F781"> </Section>
+      <Section Start="begin" BackCol="#F5DA81" Unique="true"> </Section>
+    </Block>
+    <Block Name="Func" Start="function" End="end" BackCol="#D0F5FF">
+      <Block Name="FuncParam" Start="(" End=")" Folding="false"></Block>
+      <Section Start="var" BackCol="#F3F781"> </Section>
+      <Section Start="begin" BackCol="#F5DA81" Unique="true"> </Section>
+    </Block>
+  </Section>
+
+  <Section Name="unit-type" Start="type" Parent="unit"></Section>
+
+  <Block Name="BeginEnd"  Start="Inicio" End= "Fim" BackCol="#B0FFE0">
+  </Block>
+  <Block>
+    <Start> Repeat </Start>
+	<End> Until </End>
+  </Block>
+  <Block>
+	<Start> SE </Start>
+	<End> } </End>
+  </Block>
+  <Block>
+	<Start> SENAO </Start>
+	<End> } </End>
+  </Block>
+  <Block Start="Enquanto" End= "}" >
+	  <Block>
+		<Start> SE </Start>
+		<End> } </End>
+	  </Block>
+	  <Block>
+		<Start> SENAO </Start>
+		<End> } </End>
+	  </Block>
+  </Block>
+  <Block Name="Proc" Start="procedure" End="fim" Parent="Main" BackCol="#D0F5FF">
+    <Block Name="ProcParam" Start="(" End=")" Folding="false"></Block>
+    <Section Start="var" BackCol="#F3F781"> </Section>
+    <Section Start="inicio" BackCol="#F5DA81" Unique="true"> </Section>
+  </Block>
+  <Block Name="Func" Start="function" End="fim" Parent="Main" BackCol="#D0F5FF">
+    <Block Name="FuncParam" Start="(" End=")" Folding="false"></Block>
+    <Section Start="var" BackCol="#F3F781"> </Section>
+    <Section Start="inicio" BackCol="#F5DA81" Unique="true"> </Section>
+  </Block>
+</Language>

@@ -1,0 +1,197 @@
+object frmFindRplc: TfrmFindRplc
+  Left = 1175
+  Height = 278
+  Top = 322
+  Width = 400
+  ActiveControl = edtFind
+  AlphaBlend = True
+  AlphaBlendValue = 230
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Find [Replace]'
+  ClientHeight = 278
+  ClientWidth = 400
+  Color = clYellow
+  FormStyle = fsStayOnTop
+  KeyPreview = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
+  Position = poOwnerFormCenter
+  object sbar: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 255
+    Width = 400
+    Panels = <    
+      item
+        Width = 120
+      end    
+      item
+        Width = 120
+      end    
+      item
+        Width = 120
+      end>
+    SimplePanel = False
+  end
+  object edtFind: TEdit
+    Left = 16
+    Height = 23
+    Top = 32
+    Width = 189
+    OnChange = edtFindChange
+    OnKeyPress = edtFindKeyPress
+    TabOrder = 3
+  end
+  object edtRplc: TEdit
+    Left = 16
+    Height = 23
+    Top = 97
+    Width = 189
+    Enabled = False
+    TabOrder = 7
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 15
+    Top = 8
+    Width = 68
+    Caption = 'Find this text'
+    ParentColor = False
+  end
+  object xbxRplc: TCheckBox
+    Left = 16
+    Height = 19
+    Top = 72
+    Width = 142
+    Caption = 'Replace it with this text'
+    OnClick = xbxRplcClick
+    TabOrder = 6
+  end
+  object btnFindFst: TButton
+    Tag = 1
+    Left = 208
+    Height = 26
+    Hint = '  Find first  '
+    Top = 32
+    Width = 60
+    Caption = 'First'
+    OnClick = btnFindFstClick
+    TabOrder = 4
+  end
+  object btnRplcFst: TButton
+    Tag = 2
+    Left = 208
+    Height = 26
+    Hint = '  Replace first  '
+    Top = 97
+    Width = 60
+    Caption = 'First'
+    OnClick = btnRplcFstClick
+    TabOrder = 8
+  end
+  object btnRplcAll: TButton
+    Tag = 3
+    Left = 340
+    Height = 26
+    Hint = '  Replace all  '
+    Top = 97
+    Width = 60
+    Caption = 'All'
+    OnClick = btnRplcFstClick
+    TabOrder = 10
+  end
+  object btnFindNxt: TButton
+    Tag = 1
+    Left = 273
+    Height = 26
+    Hint = '  Find next  '
+    Top = 32
+    Width = 60
+    Caption = 'Next'
+    OnClick = btnFindFstClick
+    TabOrder = 5
+  end
+  object btnRplcNxt: TButton
+    Tag = 1
+    Left = 273
+    Height = 26
+    Hint = '  Replace next  '
+    Top = 97
+    Width = 60
+    Caption = 'Next'
+    OnClick = btnRplcFstClick
+    TabOrder = 9
+  end
+  object Label2: TLabel
+    Left = 17
+    Height = 15
+    Top = 224
+    Width = 48
+    Caption = 'Direction'
+    ParentColor = False
+  end
+  object sbtnDir: TSpeedButton
+    Left = 80
+    Height = 26
+    Hint = '  Search Direction  '
+    Top = 220
+    Width = 26
+    AllowAllUp = True
+    GroupIndex = 2
+    OnClick = sbtnDirClick
+  end
+  object xbxWhole: TCheckBox
+    Left = 17
+    Height = 19
+    Top = 168
+    Width = 115
+    Caption = 'Whole words only'
+    TabOrder = 1
+  end
+  object xbxMatchCase: TCheckBox
+    Left = 17
+    Height = 19
+    Top = 144
+    Width = 80
+    Caption = 'Match case'
+    TabOrder = 0
+  end
+  object xbxSelectionOnly: TCheckBox
+    Left = 17
+    Height = 19
+    Top = 192
+    Width = 96
+    Caption = 'Selection Only'
+    TabOrder = 2
+  end
+  object btnRplcFst1: TButton
+    Tag = 2
+    Left = 328
+    Height = 26
+    Hint = '  Replace first  '
+    Top = 216
+    Width = 60
+    Caption = 'Close'
+    OnClick = btnRplcFst1Click
+    TabOrder = 12
+  end
+  object imglst: TImageList
+    Left = 176
+    Top = 8
+    Bitmap = {
+      4C7A020000001000000010000000450100000000000078DAED94CB7283300C45
+      593721BC02F4075A208100FD3B1E01F3C877AB92ED66C82213C42A8B6A46CB63
+      CBF2BDD730DEAF3E6F3F10CED85309E15842200AE0F021F2C18CDC54803F1470
+      14398B0F6E25F83372630EC7E1025E9FB178C94E3978E3055C9181D3A56C5EB2
+      4306767F06AB3BB178BA5BB22295ECA14D5EF2E1A4F6ED4FEA6E47B3E635817D
+      13C1BE566DD6F1D3B302FC2B7FC0770B35F741B3BBFA1B7695EA97B30B7C37EE
+      DBEECE726EBA93B88FEA6BF50EDC0EF92BF24D7CE7B91AB45BE2137C6F045B75
+      6C352730FE6B73912637B3981F01EA9934C966757EF8323F72567E4876911FE4
+      05D2B3BB22031E58ED61A74FA51748CFA4C9A7994979392FD88587C947A465EA
+      359ABCFB5F7BD86C62D60EDD85FFCD3696FE67F37FFED7F9C1E27BEDFF56F99F
+      931D8FF9916CCA0F0F7907FFCA92F9813354D1DBE6C02F6371E4A3
+    }
+  end
+end
