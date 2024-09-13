@@ -30,7 +30,7 @@ Catalogo de projetos (Banco de Dados sqlite )
   <blockquote>Pode baixar o executável ou pode baixar o código e compilar você mesmo. Totalmente opensource
 </blockquote>
 <blockquote>Deu mais trabalho editando o README.MD</blockquote>
-<blockquote>Se foi útil pra voçê, considere fazer uma doação. Será bem vinda. ;)</blockquote>
+<blockquote>Se foi útil pra voçe, considere fazer uma doação. Será bem vinda. ;)</blockquote>
 
 ##### feito por Arlon G. Cardoso - https://arlon.me
 
